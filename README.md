@@ -3,7 +3,7 @@
 
 0.准备工作：
 
-0.1下载并安装CTex，  
+0.1下载并安装CTex，注意下载完整版，也就是1.3G的版本  
 地址：https://mirrors.tuna.tsinghua.edu.cn/ctex/legacy/2.9/  
 
 0.2下载需要用到的字体：  
