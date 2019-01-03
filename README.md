@@ -4,13 +4,10 @@
 0.准备工作：
 
 0.1下载并安装CTex，
-
 地址：https://mirrors.tuna.tsinghua.edu.cn/ctex/legacy/2.9/
 
 0.2下载需要用到的字体：
-
 链接：https://pan.baidu.com/s/1u_5Z5W3Hiu9Ncsbtyznf_g 
-
 提取码：ndrw
 
 1.把需要用到的中文字体放入系统里面，即把fonts文件夹里的5种字体，复制粘贴进：控制面板-外观和个性化-字体
