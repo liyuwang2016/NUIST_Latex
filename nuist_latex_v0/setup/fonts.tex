@@ -1,0 +1,29 @@
+﻿% 英文字体设置特别推荐方案（Windows，需要安装 Adobe 字体），现代
+\usepackage{fontspec}
+\usepackage{xltxtra,xunicode}
+\usepackage[CJKnumber,CJKchecksingle,BoldFont]{xeCJK}
+\usepackage{amsmath}
+\usepackage{amssymb}
+% \usepackage{mathspec}
+\setmainfont[Mapping=tex-text]{Times New Roman}
+\setsansfont[Mapping=tex-text]{Arial}
+\setmonofont{Consolas}
+% \setmathfont{Times New Roman}
+
+% 中文字体设置，使用的是 Adobe 字体，保证了在 Adobe Reader / Acrobat 下优秀的显示效果
+\setCJKmainfont[BoldFont={Adobe Heiti Std},ItalicFont={Adobe Kaiti Std}]{Adobe Song Std}
+\setCJKsansfont{Adobe Heiti Std}
+\setCJKmonofont{Adobe Fangsong Std}
+
+% 定义字体名称，可在此添加自定义的字体
+\setCJKfamilyfont{song}{Adobe Song Std}
+\setCJKfamilyfont{hei}{Adobe Heiti Std}
+\setCJKfamilyfont{kai}{Adobe Kaiti Std}
+\setCJKfamilyfont{fs}{Adobe Fangsong Std}
+\setCJKfamilyfont{xkai}{STXingkai}
+
+% 自动调整中英文之间的空白
+% \punctstyle{quanjiao}
+\XeTeXlinebreaklocale "zh"      %中文断行
+\XeTeXlinebreakskip = 0pt plus 1pt %1pt左右弹性间距
+% 其他字体宏包

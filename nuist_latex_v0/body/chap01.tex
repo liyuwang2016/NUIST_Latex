@@ -1,0 +1,48 @@
+﻿\chapter{第二章~~相关工作和评价指标} %正文里的章节名
+%\addcontentsline{toc}{chapter}{第二章~~相关工作和评价指标} %目录里的章节名
+
+\label{chap01}
+
+\section{相关工作}
+
+\subsection{基于相关滤波的目标跟踪}
+最近，判别式相关滤波跟踪（DCFs）在视觉跟踪方面引起了广泛的关注，由于它们在效率和稳健性方面的优势。使用DCFs 进行视觉跟踪从MOSSE~\cite{bolme2010visual}开始，它在频率域中用几个样本学习CFs，又利用快速傅里叶变换(FFTs)高效地计算，最终能以669 帧/每秒（FPS）运行。在~\cite{henriques2012exploiting}中，Henriques 等人首先探索了循环密集样品的结构与核化嵌入，学习出CFs 进行快速跟踪。在~\cite{henriques2015high}中，Henriques等人进一步改进了~\cite{henriques2012exploiting}中的CF 跟踪器，把特征表示从原始图像强度升级到梯度方向直方图。Ma等人~\cite{ma2015hierarchical}利用不同层次深层特征间的互补，使用由粗至细的特征搜索策略，学习更有效的视觉CFs 跟踪，显著提高了相关滤波在OTB100 数据集上的性能。最近，Danelljan 等人在空间上提出了一系列的基于正则化CF 的跟踪器~\cite{danelljan2015learning,danelljan2016adaptive,danelljan2016beyond}，取得了令人印象深刻的性能。空间正则化DCF (SRDCF) 跟踪器~\cite{danelljan2015learning}试图抑制学习CFs的边界效应，它利用了具有高斯形状的空间正则化权值。基于~\cite{danelljan2015learning}, ~\cite{danelljan2016adaptive}提出了一种自适应去污方案，因而学习到了更有效的CFs，它能自适应地学习可靠性并消除各训练样本中被污染的样本。在~\cite{danelljan2016beyond}中，是在各种特征映射的连续空间域内学习CFs，能够获得亚像素级别的跟踪精度。
+
+\subsection{基于流形正则的目标跟踪}
+
+流形正则化通常用于半监督的有标记和无标记样本学习~\cite{belkin2006manifold, chang2017semisupervised, yu2013harry}，它构造了一个Laplacian 图来利用样本利用特征空间的隐式几何结构。例如，在特征空间分析中，Chang和Yang ~\cite{chang2017semisupervised}利用标记和未标记的训练数据进行更多的研究可靠的特征空间选择算法。此外,在视觉跟踪里，Yu~\cite{yu2013harry}等人利用具有时空约束的流形结构进行跟踪，在现实世界的人员定位和监控场景中具有较好的效果。Bai 和Tang~\cite{bai2012robust} 用了一个在线拉普拉斯正则化的排序支持向量机，来估计视觉跟踪的对象位置。为了更好地使用无标记数据和流形结构样本空间，Hu等人~\cite{hu2017manifold}提出了一个基于流形正则化DCF的跟踪器，增加了循环位移的样本并利用一个块优化策略，可以有效地通过FFTs 计算。Zhuang 等人~\cite{zhuang2014visual}为视觉跟踪构建了一个判别式的稀疏相似图，它是基于多任务的拉普拉斯正则反稀疏表示。
+
+\subsection{整合多类估计的跟踪}
+有一种常用的用来减少不精确预测的策略，就是将一系列方法的估计结合起来，这样跟踪器的缺点就会得到相应的补偿。
+%
+在~\cite{kwon2010visual, kwon2011tracking}里, Kwon等人利用互补的基础跟踪器，结合不同的观测模型和运动模型，然后在一个采样的框架中集成他们的估计。
+%
+在\cite{wang2014ensemble}中, Wang 和 Yeung 通过一个因子的HMM结合了几个独立的跟踪器，同时建模了目标轨迹和每个跟踪器随着时间变化的可靠性。
+%
+不同于使用不同类型的跟踪器，多专家最小熵跟踪器保留了一个过去模型的集合，并且根据熵判断准则选择出了一个最优的的预测。
+%
+在~\cite{bertinetto2016staple}中, Bertinetto等人直接合并了两个常见的岭回归得分，这里的局部表示利用HOG特征，全局表示利用了颜色特征，最后两者一同互补地工作。
+%
+
+
+
+
+
+
+\section{评价指标}
+\subsection{OTB数据集}
+OTB100数据集包含了100个测试视频序列，使用了两个典型的评价标准。第一个是精度，即定位误差小于阈值的帧所占的百分比。定位误差定义为跟踪中心与真实边界框中心之间的距离(以像素为单位)。另一个是成功率，即重叠率大于阈值的帧所占的百分比。
+%
+重叠得分被定义为
+\begin{equation}
+OS = \frac{{\left| {{G_{rec}} \cap {T_{rec}}} \right|}}{{\left| {{G_{rec}} \cup {T_{rec}}} \right|}},
+\end{equation}
+这里的${{G_{rec}}}$ 表示真实边界框，${{T_{rec}}}$ 是跟踪到的边界框. 跟踪结果的得分只要高于阈值$t$ 就会被认为是一次成功的跟踪。
+%
+最终的成功率图显示了重叠分数大于$t$的帧所占百分比，其中$t$在0到1 之间变化。利用曲线下面积(AUC)对评估后的跟踪器进行排序~\cite{wu2015object}。
+%
+\subsection{VOT数据集}
+VOT数据集每年都以挑战赛的形式更新，一般每年的VOT数据集都包含了60 个视频序列，它使用了预期的平均覆盖率（EAO）作为评价标准，这个得分是根据准确性，稳健性这两个指标计算出来的。准确性是指预测到的边界框和真实边界框之间的平均覆盖率。而稳健性度量了在跟踪中跟丢目标的次数，反映了跟踪算法针对不同视频的稳定性~\cite{kristan2015visual}。
+
+\subsection{Temple-Color数据集}
+Temple-Color数据集包含了128个颜色视频序列，旨在于评价跟踪算法在彩色视频序列上的性能~\cite{liang2015encoding}。

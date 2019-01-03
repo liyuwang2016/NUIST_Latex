@@ -1,0 +1,112 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+A level-1 auxiliary file: body/chap00.aux
+A level-1 auxiliary file: body/chap01.aux
+A level-1 auxiliary file: body/chap02.aux
+A level-1 auxiliary file: body/chap03.aux
+A level-1 auxiliary file: body/conclusion.aux
+The style file: zjugbno.bst
+A level-1 auxiliary file: appendix/publications.aux
+A level-1 auxiliary file: appendix/acknowledgements.aux
+Database file #1: body/reference.bib
+I was expecting a `,' or a `}'---line 115 of file body/reference.bib
+ : 
+ : @article{yang2012multimedia,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 411 of file body/reference.bib
+ : @article{zhuang2014visual
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 421 of file body/reference.bib
+ : @article{hu2017manifold
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 428 of file body/reference.bib
+ : @inproceedings{bai2012robust
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 450 of file body/reference.bib
+ : @inproceedings{danelljan2016beyond
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 465 of file body/reference.bib
+ : @inproceedings{ma2015hierarchical
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 523 of file body/reference.bib
+ : @article{wu2015object
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 533 of file body/reference.bib
+ : @inproceedings{kristan2015visual
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 573 of file body/reference.bib
+ : @inproceedings{danelljan2015learning
+ :                                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 601 of file body/reference.bib
+ : @inproceedings{bolme2010visual
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 617 of file body/reference.bib
+ : @inproceedings{bertinetto2016staple
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 624 of file body/reference.bib
+ : @article{henriques2015high
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 634 of file body/reference.bib
+ : @article{li2013survey
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 644 of file body/reference.bib
+ : @article{belkin2006manifold
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 653 of file body/reference.bib
+ : @article{ali2016visual
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 663 of file body/reference.bib
+ : @article{wangvisual
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 908 of file body/reference.bib
+ : @inproceedings{danelljan2015learning
+ :                                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 925 of file body/reference.bib
+ : @article{henriques2015high
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 944 of file body/reference.bib
+ : @inproceedings{bolme2010visual
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1026 of file body/reference.bib
+ : @article{wu2015object
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1036 of file body/reference.bib
+ : @inproceedings{kristan2015visual
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1043 of file body/reference.bib
+ : @article{liang2015encoding
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1072 of file body/reference.bib
+ : @inproceedings{bertinetto2016staple
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1112 of file body/reference.bib
+ : @inproceedings{ma2015hierarchical
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1119 of file body/reference.bib
+ : @inproceedings{danelljan2016beyond
+ :                                   ,
+I'm skipping whatever remains of this entry
+(There were 25 error messages)

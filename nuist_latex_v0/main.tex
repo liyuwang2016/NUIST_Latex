@@ -1,0 +1,97 @@
+﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%
+% 南京信息工程大学硕士论文 XeLaTeX 模版 —— 主文件 main.tex
+% 版本：2018.10
+% 制作时参考了各个大学的模板，作者：自动化学院 樊佳庆 (E-mail: fjq199407@163.com)
+% 使用环境：Win7 + CTeX v2.9.2.164_Full + WinEdit
+% CTex下载地址：https://mirrors.tuna.tsinghua.edu.cn/ctex/legacy/2.9/
+% 注意，安装1.3G完整版的
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt, a4paper, openany, twoside]{book}
+
+% 配置字体
+\input{setup/fonts}
+
+% 宏包配置文件
+\input{setup/packages}
+
+% 格式文件
+\input{setup/format}
+
+\begin{document}
+
+% 定义所有的图片文件在 figures 子目录下
+\graphicspath{{figures/}}
+
+% 前言
+\frontmatter
+\pagenumbering{Roman}
+\input{preface/cover}  % 输入封面
+\originality           % 创建独创性说明和授权说明
+
+
+
+%%生成目录
+\defaultmenufont  % 设置默认目录字体和行间距
+\tableofcontents  % 正式生成目录
+%\cleardoublepage
+% 插图目录，我们不用
+% \listoffigures
+% 表格目录，我们也不用
+% \listoftables
+%\cleardoublepage
+
+%% 创建摘要放在目录后面
+\makeabstract
+\defaultfont
+\mainmatter
+% 正文章节
+\defaultfont
+\renewcommand{\thefootnote}{\arabic{footnote}} % 页脚
+\include{body/chap00}
+\include{body/chap01}
+\include{body/chap02}
+\include{body/chap03}
+%\include{body/chap04}  %如果第5章用不到的话，你就直接删了它。
+
+%% 结论
+\include{body/conclusion}
+%\cleardoublepage
+ %\backmatter
+
+
+% 参考文献
+\defaultfont
+\wuhao
+\bibliographystyle{zjugbno}
+\bibliography{body/reference}
+\addcontentsline{toc}{chapter}{参考文献}
+%\cleardoublepage  %我认为这里不用偶数页空白
+
+
+%% 附录A是辅助性的公式推导或图表，不是必须的
+%\defaultfont
+%\begin{appendix}
+%  \input{appendix/chapA}
+%\end{appendix}
+%\cleardoublepage
+
+\defaultfont
+%%发表的文章列表，是必须要的
+\include{appendix/publications}
+%\cleardoublepage
+
+%% 致谢是必须要的
+\include{appendix/acknowledgements}
+%\cleardoublepage %我认为这里也不用偶数页空白
+
+% 授权书,已删，与独创性合并
+%\chapter*{}
+%\addcontentsline{toc}{chapter}{南京信息工程大学学位论文版权使用授权书}
+%\renewcommand{\baselinestretch}{1.61}
+%\vspace{-0.48cm}
+%\authorization
+%\cleardoublepage
+
+\end{document}

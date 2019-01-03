@@ -1,0 +1,71 @@
+﻿
+
+%\cdegree{\textbf{快速目标跟踪算法的有效正则化研究}}
+\ctitle{\textbf{基于时空上下文学习的快速目标跟踪算法研究}}
+\etitle{Fast Object Tracking via Spatio-temporal context Learning}
+
+
+
+% 编辑姓名等个人信息
+\theauthor{{\quad\;}樊~佳~庆}
+\teacher{{\quad\;}张开华~~教授}
+\themajor{{\quad\;}系~统~科~学}
+\direction{{\quad\;}视频单目标跟踪}
+\college{{\quad\;}自动化学院}
+
+%%中文摘要的具体内容
+\cabstract{
+  尽管已研究多年，快速并且高性能的目标跟踪算法依然缺失。其中一个关键问题是，视频帧中的时空上下文信息并未被充分利用，而这部分信息对于相关滤波跟踪的性能影响重大。为了解决上述问题，本文主要基于时空上下文学习对快速目标跟踪算法进行研究，使之能更有效地利用时空上下文信息建模，主要贡献概括为如下2点：
+
+  \begin{asparaenum}
+  \item 尽管相关滤波类跟踪已经被研究多年，但是，其固有的样本循环假设也引入了严重的冗余，这样不利于学到一个有效的分类器。在本文中，我们开发了一个快速的流形正则上下文感知相关滤波跟踪算法，来挖掘不同类型样本间局部的流形结构信息。首先，不同于只利用一个基样本的传统相关滤波类跟踪，我们使用了一系列基样本周围的上下文样本，并对其进行了流形结构假设。然后，考虑到这些样本中存在的流形结构，我们在相关滤波（CF）学习中，引入了一个线性图拉普拉斯正则项。幸运的是，这个优化问题能够利用快速傅里叶变换得到一个闭式解，因而能够高效地实现。大量在OTB100和VOT2016数据集上的实验评估表明，提出的跟踪算法在准确性和鲁棒性方面，表现优于几个最先进的算法的。特别地,我们的跟踪器能够在单个CPU上以28fps的速度实时运行。
+  \item 最近，一种简单而高效名叫Staple的跟踪算法在效率和准确度方面，取得了很有潜力的结果。它配备有判别式相关滤波(DCFs)跟踪器和颜色直方图的互补学习器，这种互补特性使得它对颜色变化和形变都具有很强的适应性。然而，它也有一些缺点:(1)Staple对于所有序列，只使用标准颜色直方图，量化标准相同，并没有考虑目标在每个序列中的具体结构信息，从而影响其区分目标和背景的能力。(ii)Staple中使用的标准DCFs是有效的，但是存在多余的边界效应问题，导致一些具有挑战性的场景中的跟踪失败。为了解决这些问题，我们提出了基于颜色聚类和时空正则相关回归的互补跟踪器(CSCT)。 所提出的CSCT包含两个互补的部分，可以自适应地处理每个序列的显着颜色变化和形变问题:首先，我们设计了一个新颖的基于颜色聚类的直方图模型，该模型首先自适应地将第一帧目标的颜色划分为几个颜色聚类中心，构建自适应颜色直方图，这样一来模型就能适应严重的目标形变问题。另外,我们提出学习时空正则化的CFs，既能缓解边界效应，在目标剧烈变化时，又能提供一个比原Staple里标准DCF更稳健的表观模型。与Staple相比，我们的CSCT仅仅利用简单的手工特征，在OTB100、Temple-Color和VOT2016 这三个数据集上，分别提升了5.9\%，3.4\%和1.5\%。此外，我们的CSCT甚至超过了几个最先进的复杂深度网络跟踪器。
+
+%  \item 在目标跟踪领域，动态时空信息几乎没有被人提及。比如，最近的空间正则相关滤波跟踪（SRDCF）类的跟踪算法虽然创新地提出了对滤波器的空间约束方法，但是固定了对滤波器的约束矩阵，使其不能适应目标与相关滤波器的快速变化，最终滤波器会不断退化，致使跟踪失败。为了解决此问题，本文提出了动态时空正则学习模型，在总目标函数中引入了动态时空正则项来同时学出惩罚矩阵和相关滤波器，使得相关滤波器被更好地约束，能缓解遮挡等造成的过拟合问题。
+  \end{asparaenum}
+}
+
+\ckeywords{目标跟踪；相关滤波；时空正则；上下文学习}
+
+
+%%英文摘要的具体内容
+\eabstract{
+Despite years of research, fast and high-performance target tracking algorithms are still missing.
+%
+One of the key issues is that the spatio-temporal context information in frame video is not fully utilized, and this part of information has a significant impact on correlation filtering tracking performance.
+%
+In order to solve the above problems, in this thesis, we develop fast object tracking algorithms mainly based on spatio-temporal context learning.
+The main contribution of this study is summarized as follows:
+
+(1)%
+Despite the demonstrated success of numerous correlation filter (CF) based tracking approaches, their assumption of circulant structure of samples introduces significant redundancy to learn an effective classifier.
+%
+In this paper, we develop a fast manifold regularized context-aware correlation tracking algorithm that mines the local manifold structure information of different types of samples.
+%
+First, different from the traditional CF based tracking that only uses one base sample, we employ a set of contextual samples near to the base sample, and impose a manifold structure assumption on them. Afterwards, to take into account the manifold structure among these samples, we introduce a linear graph Laplacian regularized term into the objective of CF learning. Fortunately, the optimization can be efficiently solved in a closed form with fast Fourier transforms (FFTs), which contributes to a highly efficient implementation. Extensive evaluations on the OTB100 and VOT2016 datasets demonstrate that the proposed tracker performs favorably against several state-of-the-art algorithms in terms of accuracy and robustness. Especially, our tracker is able to run in real-time with 28 fps on a single CPU.
+
+(2)Recently, a simple, yet effective and efficient tracker named Staple has achieved promising performance in terms of efficiency and accuracy on a series of visual tracking benchmarks.
+%
+Staple is equipped with complementary learners of discriminative correlation filters (DCFs) and color histograms, which are robust to both color changes and deformations.
+%
+However, it has some drawbacks:
+%
+(i) Staple only employs standard color histograms with the same quantization step for all sequences, which does not consider the specific structural information of target in each sequence, thereby affecting its discriminative capability to separate target from background.
+%
+(ii) The standard DCFs are efficient but suffer from unwanted boundary effects, leading to failures in some challenging scenarios.
+%
+To address these issues, we present a dual color clustering and spatio-temporal regularized correlation regressions based complementary tracker (CSCT).
+%
+The proposed CSCT includes two components with complementary merits to adaptively deal with significant color variations and deformations for each sequence:
+%
+First, we design a novel color clustering based histogram model that first adaptively divides the colors of the target in the 1st frame into several cluster centers, and then the cluster centers are taken as references to construct adaptive color histograms for targets in the coming frames, which enable to adapt significant target deformations.
+%
+Second, we propose to learn spatio-temporal regularized CFs, which not only enable to avoid boundary effects but also provides a more robust appearance model than the discriminative CFs in Staple in the case of large appearance variations.
+%
+Compared with Staple, our CSCT with handcrafted features achieves a gain of 5.9\%, 3.4\% and 1.5\% on OTB100, Temple-Color and VOT2016 benchmarks in terms of AUC and EAO scores, respectively. Moreover, our CSCT performs favorably against several state-of-the-art trackers including the deep learning based trackers.
+
+
+}
+
+\ekeywords{Visual tracking; correlation filter; spatio-temporal regularization; context learning}
+\makecover

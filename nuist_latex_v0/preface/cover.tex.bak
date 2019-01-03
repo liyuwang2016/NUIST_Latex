@@ -1,0 +1,38 @@
+﻿
+
+%\cdegree{\textbf{快速目标跟踪算法的有效正则化研究}}
+\ctitle{\textbf{基于时空上下文学习的快速目标跟踪算法研究}}
+\etitle{Fast Object Tracking via Spatio-temporal context Learning}
+
+
+
+% 编辑姓名等个人信息
+\theauthor{{\quad\;}樊~佳~庆}
+\teacher{{\quad\;}张开华~~教授}
+\themajor{{\quad\;}系~统~科~学}
+\direction{{\quad\;}视频单目标跟踪}
+\college{{\quad\;}自动化学院}
+
+%%中文摘要的具体内容
+\cabstract{
+  尽管已研究多年，快速并且高性能的目标跟踪算法依然缺失。其中一个关键问题是，视频帧中的时空上下文信息并未被充分利用，而这部分信息对于相关滤波跟踪的性能影响重大。为了解决上述问题，本文主要是基于静态与动态时空学习的快速目标跟踪算法研究，使之能更有效地利用静态与动态的时空信息建模，主要贡献概括为如下3 点：
+
+  \begin{asparaenum}
+  \item 静态的空间正负样本分布信息往往对学到的分类器的性能有重要影响。本文特别地利用了样本的流形正则分布和空间上下文信息，提出了实时的流形正则上下文相关滤波跟踪算法。
+  \item 为了有效利用静态空间信息，根据场景空间上的颜色分布，我们首先使得颜色聚类到若干个中心点，得到更稳定的颜色分类器。此外，静态的时空特性也有助于学习到更可靠的相关滤波器。最后，将两者结合，利用各自的优势，得到一个集成的跟踪器，实现了快速有效的目标跟踪。
+  \item 在目标跟踪领域，动态时空信息几乎没有被人提及。比如，最近的空间正则相关滤波跟踪（SRDCF）类的跟踪算法虽然创新地提出了对滤波器的空间约束方法，但是固定了对滤波器的约束矩阵，使其不能适应目标与相关滤波器的快速变化，最终滤波器会不断退化，致使跟踪失败。为了解决此问题，本文提出了动态时空正则学习模型，在总目标函数中引入了动态时空正则项来同时学出惩罚矩阵和相关滤波器，使得相关滤波器被更好地约束，能缓解遮挡等造成的过拟合问题。
+  \end{asparaenum}
+}
+
+\ckeywords{目标跟踪；相关滤波；时空正则；动态约束}
+
+
+%%英文摘要的具体内容
+\eabstract{
+  Despite years of research, fast and high-performance target tracking algorithms are still missing.One of the key problems is that the static and dynamic spatiotemporal information between video frames is not fully utilized, and this part of information has a significant impact on the performance of correlation filtering tracking.In order to solve the above problems, this paper mainly studies the fast target tracking algorithm based on the static and dynamic spatiotemporal learning, so that it can make more effective use of the static and dynamic spatiotemporal information modeling. The main contributions are summarized as follows:
+
+}
+
+\ekeywords{Visual tracking; correlation filter; spatio-temporal regularization; dynamical constraint}
+
+\makecover
