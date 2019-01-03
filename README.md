@@ -2,9 +2,15 @@
 南京信息工程大学硕士研究生毕业论文latex模板
 
 0.准备工作：
-0.1下载并安装CTex，地址：https://mirrors.tuna.tsinghua.edu.cn/ctex/legacy/2.9/
+
+0.1下载并安装CTex，
+
+地址：https://mirrors.tuna.tsinghua.edu.cn/ctex/legacy/2.9/
+
 0.2下载需要用到的字体：
+
 链接：https://pan.baidu.com/s/1u_5Z5W3Hiu9Ncsbtyznf_g 
+
 提取码：ndrw
 
 1.把需要用到的中文字体放入系统里面，即把fonts文件夹里的5种字体，复制粘贴进：控制面板-外观和个性化-字体
@@ -29,7 +35,7 @@
 
 2.9 main.tex/body/acknowledgments 写的是你的致谢
 
-如果你不太会修改里面的内容的话，打电话问孙师兄（15720603478）吧，或者微信搜sunyitang
+如果你不太会修改里面的内容的话，打电话问孙师兄（+86 15720603478）吧，或者微信搜sunyitang
 
 3.注意，这个latex版本和最后的学校论文版本肯定是不一样的，建议最后复制粘贴到word里，
 如果你觉得那不如直接用word，干嘛要用latex，那请你去用你的word，谢谢。
